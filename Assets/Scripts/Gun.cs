@@ -4,7 +4,7 @@ using System.Collections;
 public class Gun : MonoBehaviour
 {
 	public Rigidbody2D rocket;				// Prefab of the rocket.
-	public float speed = 20f;				// The speed the rocket will fire at.
+	public float speed = 10f;				// The speed the rocket will fire at.
 
 
 	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
@@ -33,7 +33,7 @@ public class Gun : MonoBehaviour
 			{
 				// ... instantiate the rocket facing right and set it's velocity to the right. 
 				Rigidbody2D bulletInstance = Instantiate(rocket, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-				bulletInstance.velocity = new Vector2(speed, 0);
+				bulletInstance.velocity = new Vector2(speed, 2);
 			}
 			else
 			{
